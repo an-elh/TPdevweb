@@ -12,9 +12,11 @@ body{
     margin:0px;
     padding:0px;
     overflow: hidden;
+    display: flex;
 }
 .navigation li{
     float:left;
+    display:inline-flex;
 }
 .navigation a{
     position: relative;
