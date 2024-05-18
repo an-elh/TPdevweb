@@ -39,6 +39,7 @@ body{
     display:block;
     text-decoration: none;
     font-size: 20px;
+    border-radius: 10rem;
 }
 .navigation a:hover{
     color: gray;
@@ -200,6 +201,27 @@ img{
 }
 #filieres div:hover{
     transform: scale(1.05,1.05);
+    box-shadow: 10px 5px 10px;
+}
+label{
+    color: rgb(4, 4, 4);
+}
+#inscr{
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+#inscr table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#inscr table td, #inscr table th {
+    padding: 15px;
+    font-size: 18px;
 }
 @keyframes slideleft {
     from{transform:translateX(300px)}
@@ -213,8 +235,57 @@ img{
 @keyframes rotation {
     100%{transform:rotateX(360deg)}
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .navigation {
+        overflow: auto;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        margin: 0;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    #ins {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .headline, #nom, #tag, #def {
         text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    img {
+        width: 100%;
+        padding: 0;
+    }
+
+    #filieres {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    #filieres > div {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #inscr {
+        margin: 20px;
+        padding: 10px;
+    }
+    #Acceuil #filiere #inscr{
+        flex-direction: column;
+        align-items: center;
     }
 }
