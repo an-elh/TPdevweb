@@ -2,6 +2,7 @@
     <head>
         <title>BTS</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="stylebtsaccueil.css" rel="stylesheet">
     </head>
     <body>
@@ -14,7 +15,7 @@
                 <ul>
                     <li><a href="#acc">Acceuil</a></li>
                     <li><a href="#filieres">Filières</a></li>
-                    <li><a href="#inscription">Inscription</a></li>
+                    <li><a href="#inscr">Inscription</a></li>
                 </ul>
                 </div>
             </ul>
@@ -25,7 +26,7 @@
                     <a id="nom">Lycée technique ibn sina</a>
                     <h1 id="tag">Boostez Votre Avenir</h1>
                     <p id="def">Une formation de 2 ans</p>
-                    <button id="ins"><a>Inscrivez-vous</a></button>
+                    <button id="ins" href="#inscr" ><a>Inscrivez-vous</a></button>
                 </div>
                 <div>
                     <img src="images/imagesSE.jpg">
@@ -57,6 +58,97 @@
                     <h5>PME/PMI</h5>
                     <p>Gestion des Petites et Moyennes Entreprises et des Petites et Moyennes Industries</p>
                 </div>
+            </div>
+            <div id="inscr">
+                <table>
+                    <tr>
+                        <td>
+                            <label>Nom</label>
+                        </td>
+                        <td>
+                            <input type="text" name="nom" placeholder="Entrer votre nom...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Prenom</label>
+                        </td>
+                        <td>
+                            <input type="text" name="prenom" placeholder="Entrer votre prenom...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Date de naissance</label>
+                        </td>
+                        <td>
+                            <input type="date" name="DDN" placeholder="jj/dd/aaaa">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>E-mail</label>
+                        </td>
+                        <td>
+                            <input type="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Sexe</label>
+                        </td>
+                        <td>
+                            M<input type="radio" name="sexe" checked value="M">
+                            F<input type="radio" name="sexe" value="F">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Les filieres</label>
+                        </td>
+                        <td>
+                            <select name="fil" >
+                                <option value="DSI">Développement des Systèmes d’Information</option>
+                                <option value="SE">Systèmes Electroniques</option>
+                                <option value="CPI">Conception du Produit Industriel</option>
+                                <option value="MI">Maintenance Industrielle</option>
+                                <option value="PME">PME/PMI</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Adresse</label>
+                        </td>
+                        <td>
+                            <textarea name="adresse" cols="30" rows="2"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Mot de passe</label>
+                        </td>
+                        <td>
+                            <input type="password" name="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Confirmation</label>
+                        </td>
+                        <td>
+                            <input type="password" name="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="send">
+                        </td>
+                        <td>
+                            <input type="reset">
+                        </td>
+                    </tr>
+                </table>
             </div>
         </main>
     </body>
