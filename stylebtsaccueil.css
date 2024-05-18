@@ -1,6 +1,14 @@
 body{
-    background-color: rgb(28, 156, 220);
     margin:0px;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navigation{
+    min-width: 1500px;
+    max-width: 100%;
+    animation-name: slidedown;
+    animation-duration: 1s;
 }
 .navigation img{
     width: 40px;
@@ -8,15 +16,20 @@ body{
 }
 .navigation ul{
     list-style-type: none;
-    background-color:blue;
+    background-color:rgb(89, 155, 247);
     margin:0px;
     padding:0px;
     overflow: hidden;
-    display: flex;
+    display: block;
 }
 .navigation li{
     float:left;
-    display:inline-flex;
+    display: grid;
+}
+.nav{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .navigation a{
     position: relative;
@@ -35,7 +48,10 @@ body{
     margin-left:400px;
 }
 .nav li{
-    margin-left:200px ;
+    margin: 10 100px;
+}
+.logo {
+    flex: 0 0 auto;
 }
 #ins{
     background-color: whitesmoke;
@@ -48,6 +64,13 @@ body{
     background-image: linear-gradient(to left, rgb(34, 52, 220),rgb(115, 149, 248));
     border-radius: 10%;
     font-size: 20px;
+    transition: background-image 0.3s ease;
+}   
+#ins:hover{
+    background-image: linear-gradient(to left,rgb(115, 149, 248), rgb(34, 52, 220));
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
     
 }
 img{
@@ -56,7 +79,6 @@ img{
     height: 400px;
     padding-right:100px;
     padding-left: 100px;
-
 }
 #ins a:hover{
     color: gray;
@@ -79,14 +101,26 @@ img{
 }
 .headline{
     padding-left: 110px;
+    animation-name: slideright;
+    animation-duration: 1s;
+}
+#container > div{
+    display: grid;
 }
 .maiin{
     margin-top: 200px;
 }
 #container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
-
+#container img{
+    animation-name: slideleft;
+    animation-duration: 1.2s;
+}
 .SE img{
     height: 150px;
     width: 170px;
@@ -95,7 +129,7 @@ img{
 .SE {
     font-size: 20px;
     display:grid;
-    background-color: rgb(252, 191, 59);
+    background-color:rgb(35, 82, 153);
 }
 .DSI img{
     height: 150px;
@@ -105,7 +139,7 @@ img{
 .DSI {
     font-size: 20px;
     display:grid;
-    background-color: rgb(252, 191, 59);
+    background-color:rgb(35, 82, 153);
 }
 .CPI img{
     height: 150px;
@@ -115,7 +149,7 @@ img{
 .CPI {
     font-size: 20px;
     display:grid;
-    background-color: rgb(252, 191, 59);
+    background-color:rgb(35, 82, 153);
 }
 .MI img{
     height: 150px;
@@ -125,20 +159,62 @@ img{
 .MI {
     font-size: 20px;
     display:grid;
-    background-color: rgb(252, 191, 59);
-
+    background-color: rgb(35, 82, 153);
 }
 .PME img{
     height: 150px;
     width: 170px;
     padding-left: 30px;
 }
-.PME {
+.PME{
     font-size: 20px;
     display:grid;
-    background-color: rgb(252, 191, 59);
+    background-color: rgb(35, 82, 153);
 }
 #filieres{
     display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 300px;
+}
+#filieres > div{
+    border: 2px solid black;
+    margin: 10px;
+    width: 22rem;  
+    height: 30rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+
+}
+#filieres > div h5 {
+    text-align: center;
+    margin-top: 0px;
+}
+#filieres > div p {
+    text-align: center;
+    margin-top: 0px;
+}
+#filieres > div img {
+    padding-left: 90px;
+}
+#filieres div:hover{
+    transform: scale(1.05,1.05);
+}
+@keyframes slideleft {
+    from{transform:translateX(300px)}
+}
+@keyframes slideright {
+    from{transform:translateX(-300px)}
+}
+@keyframes slidedown {
+    from{transform:translateY(-300px)}
+}
+@keyframes rotation {
+    100%{transform:rotateX(360deg)}
+}
+@media (max-width: 480px) {
+    .navigation {
+        text-align: center;
+    }
 }
