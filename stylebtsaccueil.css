@@ -278,7 +278,11 @@ label{
         width: 90%;
         margin: 10px auto;
     }
-
+    
+    select:optional{
+        width: 200px;
+    }
+    
     #inscr {
         margin: 20px;
         padding: 10px;
